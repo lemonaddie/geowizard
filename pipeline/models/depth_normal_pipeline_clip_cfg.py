@@ -12,7 +12,7 @@ from diffusers import (
     DDIMScheduler,
     AutoencoderKL,
 )
-from unet_2d_condition import UNet2DConditionModel
+from .unet_2d_condition import UNet2DConditionModel
 from diffusers.utils import BaseOutput
 from transformers import CLIPTextModel, CLIPTokenizer
 from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
