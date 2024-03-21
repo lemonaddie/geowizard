@@ -14,7 +14,6 @@ from diffusers import (
 )
 from .unet_2d_condition import UNet2DConditionModel
 from diffusers.utils import BaseOutput
-from transformers import CLIPTextModel, CLIPTokenizer
 from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
 import torchvision.transforms.functional as TF
 from torchvision.transforms import InterpolationMode
