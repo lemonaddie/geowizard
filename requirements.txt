@@ -1,0 +1,13 @@
+xformers == 0.0.21
+diffusers == 0.25.0
+opencv-python 
+numpy == 1.23.1
+Pillow
+h5py
+json
+matplotlib
+pickle
+scikit-image==0.22.0
+gradio == 3.32.0
+tqdm == 4.65.0
+imgaug
