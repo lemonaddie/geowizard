@@ -12,19 +12,17 @@ from diffusers import (
     DDIMScheduler,
     AutoencoderKL,
 )
-from models.unet_2d_condition import UNet2DConditionModel
+from .models.unet_2d_condition import UNet2DConditionModel
 from diffusers.utils import BaseOutput
 from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
 import torchvision.transforms.functional as TF
 from torchvision.transforms import InterpolationMode
 
-import sys
-sys.path.append("../")
-from utils.image_util import resize_max_res,chw2hwc,colorize_depth_maps
-from utils.colormap import kitti_colormap
-from utils.depth_ensemble import ensemble_depths
-from utils.normal_ensemble import ensemble_normals
-from utils.batch_size import find_batch_size
+from .utils.image_util import resize_max_res,chw2hwc,colorize_depth_maps
+from .utils.colormap import kitti_colormap
+from .utils.depth_ensemble import ensemble_depths
+from .utils.normal_ensemble import ensemble_normals
+from .utils.batch_size import find_batch_size
 import cv2
 
 class DepthNormalPipelineOutput(BaseOutput):
