@@ -18,6 +18,8 @@ from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
 import torchvision.transforms.functional as TF
 from torchvision.transforms import InterpolationMode
 
+import sys
+sys.path.append("../")
 from utils.image_util import resize_max_res,chw2hwc,colorize_depth_maps
 from utils.colormap import kitti_colormap
 from utils.depth_ensemble import ensemble_depths
