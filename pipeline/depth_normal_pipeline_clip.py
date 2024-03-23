@@ -73,7 +73,7 @@ class DepthNormalEstimationPipeline(DiffusionPipeline):
     @torch.no_grad()
     def __call__(self,
                  input_image:Image,
-                 denosing_steps: int = 10,
+                 denoising_steps: int = 10,
                  ensemble_size: int = 10,
                  processing_res: int = 768,
                  match_input_res:bool =True,
@@ -95,7 +95,7 @@ class DepthNormalEstimationPipeline(DiffusionPipeline):
             )," Value Error: `resize_output_back` is only valid with "
         
         assert processing_res >=0
-        assert denosing_steps >=1
+        assert denoising_steps >=1
         assert ensemble_size >=1
 
         # --------------- Image Processing ------------------------
@@ -145,7 +145,7 @@ class DepthNormalEstimationPipeline(DiffusionPipeline):
 
             depth_pred_raw, normal_pred_raw = self.single_infer(
                 input_rgb=batched_image,
-                num_inference_steps=denosing_steps,
+                num_inference_steps=denoising_steps,
                 domain=domain,
                 show_pbar=show_progress_bar,
             )
